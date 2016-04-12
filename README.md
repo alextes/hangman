@@ -2,14 +2,16 @@
 3dhubs technical challenge
 
 ### use
-`npm run server` to start the server
-GET /newGame to start a game
-POST /makeGuess to make a guess
-a guess request should include a json body like:
+* `npm run server` to start the server. default address is `http://localhost:8080`
+* `GET /newGame` to start a game
+* `POST /makeGuess` to make a guess
+* a guess request should include a json body like:
+```
 {
   "id": 123,
   "character": "a"
 }
+```
 
 ### requirements
 * chooses a random word out of 6 words: (3dhubs, marvin, print, filament, order, layer)
