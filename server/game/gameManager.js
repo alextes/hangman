@@ -60,15 +60,6 @@ function isGameLost(id) {
 }
 
 /**
- * Returns if the player is out of moves, or solved the game
- * @param {GameId} id
- * @returns {Boolean}
- */
-function isGameOver(id) {
-  return isGameLost(id) || isGameWon(id);
-}
-
-/**
  * Returns if the whole word is solved and the game thus won
  * @param {GameId} id
  * @returns {Boolean}
@@ -76,6 +67,15 @@ function isGameOver(id) {
 function isGameWon(id) {
   const game = getGame(id);
   return game.isWon;
+}
+
+/**
+ * Returns if the player is out of moves, or solved the game
+ * @param {GameId} id
+ * @returns {Boolean}
+ */
+function isGameOver(id) {
+  return isGameLost(id) || isGameWon(id);
 }
 
 /**

@@ -12,6 +12,9 @@
   "character": "a"
 }
 ```
+* `npm run lint` to check for linting errors
+* `npm run dev` to start the client dev server
+* `npm run build` to build
 
 ### requirements
 * chooses a random word out of 6 words: (3dhubs, marvin, print, filament, order, layer)

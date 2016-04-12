@@ -1,5 +1,5 @@
 'use strict';
-const { IllegalMoveError } = require('./util/customError');
+const { GameOverError, IllegalMoveError } = require('./util/customError');
 const debug = require('debug')('hangman:server');
 const gameManager = require('./game/gameManager');
 const gameValidation = require('./validations/gameValidation');
@@ -14,7 +14,7 @@ const sessionId = require('./util/sessionId');
  * @param req
  * @param res
  */
-function startNewGame(req, res) {
+function newGame(req, res) {
   const id = sessionId.getNextId();
   const resObj = gameManager.createGame(id);
   resObj.sessionId = id;
@@ -49,7 +49,7 @@ function handleMove(req, res) {
       case IllegalMoveError:
         return res.send(400, error);
       case GameOverError:
-        return res.send(400);
+        return res.send(400, error);
       default:
         debug('failed to make move for unexpected reason, error:', error);
         return res.send(500);
@@ -82,7 +82,7 @@ function deleteGame(req, res) {
 }
 
 module.exports = (server) => {
-  server.get('/startNewGame', startNewGame);
+  server.get('/newGame', newGame);
   server.post('/makeGuess', handleMove);
   server.del('/deleteGame', deleteGame);
 };

@@ -1,14 +1,9 @@
-/* eslint-disable func-name */
+/* eslint-disable func-names */
 'use strict';
 const { NotFoundError } = require('../../../server/util/customError');
-const config = require('../../../server/config/gameConfig');
-const guessables = require('../../../server/config/guessables');
-const Game = require('../../../server/game/game');
 const gameManager = require('../../../server/game/gameManager');
 const { GameOverError } = require('../../../server/util/customError');
-const ruleSet = require('../../../server/config/ruleSet');
 const should = require('should');
-const sinon = require('sinon');
 
 describe('GameManager', () => {
   describe('#createGame', () => {
@@ -25,7 +20,7 @@ describe('GameManager', () => {
   });
 
   describe('#evaluateMove', () => {
-    it('should throw a GameOverError if the game is done', function () {
+    it('should throw a GameOverError if the game is done', () => {
       gameManager.createGame(196);
       gameManager.evaluateMove(196, { character: 'a' });
       gameManager.evaluateMove(196, { character: 'b' });

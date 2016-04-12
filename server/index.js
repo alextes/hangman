@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 'use strict';
 const debug = require('debug')('hangman:http');
 const server = require('./server');

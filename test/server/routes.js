@@ -7,10 +7,10 @@ const sinon = require('sinon');
 const mockGameState = require('../mocks/gameState');
 
 describe('Routes', () => {
-  describe('#startNewGame', () => {
+  describe('#newGame', () => {
     it('should return 200 if starting was successful', done => {
       request(server)
-        .get('/startNewGame')
+        .get('/newGame')
         .expect(200, (err, res) => {
           res.body.should.have.keys(Object.keys(mockGameState));
           done(err);

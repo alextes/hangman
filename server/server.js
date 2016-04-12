@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 'use strict';
 const morgan = require('morgan');
 const debug = require('debug')('hangman:server');
