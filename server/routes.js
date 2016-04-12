@@ -17,7 +17,7 @@ const sessionId = require('./util/sessionId');
 function newGame(req, res) {
   const id = sessionId.getNextId();
   const resObj = gameManager.createGame(id);
-  resObj.sessionId = id;
+  resObj.id = id;
   res.send(200, resObj);
 }
 

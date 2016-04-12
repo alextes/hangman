@@ -15,7 +15,7 @@ export function guess(character) {
     request
       .get(routes.makeMove)
       .query({
-        sessionId: this.sessionId,
+        id: this.sessionId,
         character,
       })
       .end(callback);
