@@ -38,7 +38,7 @@ function handleMove(req, res) {
   }
 
   // see if the move is legal
-  const id = req.query.id;
+  const id = parseInt(req.query.id, 10);
   const guess = { character: req.query.character };
 
   // make the move

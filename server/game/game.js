@@ -151,8 +151,10 @@ class Game {
    * @param {number[]} indices
    */
   updateGameState(character, indices) {
-    // spend one move
-    this.numberOfMovesMade += 1;
+    // spend one move if no matches were made
+    if (indices.length === 0) {
+      this.numberOfMovesMade += 1;
+    }
 
     // update the solved word
     for (const index of indices) {
