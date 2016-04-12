@@ -1,8 +1,10 @@
-<template id="Stats">
-  <h3>stats conmponent</h3>
+<template id="stats">
+  <h3>stats component</h3>
 </template>
 <script>
+import Vue from 'vue';
+
 export default {
-  components: {};
+  components: {},
 }
 </script>

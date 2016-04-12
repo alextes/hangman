@@ -1,5 +1,5 @@
 const HOST = process.env.HOST || 'http://localhost';
-const PORT = process.env.PORT || '8080';
+const PORT = process.env.PORT || '8888';
 
 const routes = {
   newGame: `${HOST}:${PORT}/newGame`,
