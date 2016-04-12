@@ -37,15 +37,11 @@ class Game {
 
   get solvedCount() {
     let solvedCount = 0;
-    console.log('sec:', this.secretWord);
-    console.log('seclength:', this.secretWord.length);
-    console.log('sol:', this.solvedWord);
     for (let i = 0; i < this.secretWord.length; i++) {
       if (this.secretWord[i] === this.solvedWord[i]) {
         solvedCount += 1;
       }
     }
-    console.log('count:', solvedCount);
     return solvedCount;
   }
 
