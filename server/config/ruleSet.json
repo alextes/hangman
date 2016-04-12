@@ -1,0 +1,5 @@
+{
+  "limitMoveCharSet": true,
+  "limitMoveCount": true,
+  "sameLetterMoveCounts": false
+}

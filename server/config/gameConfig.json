@@ -1,0 +1,4 @@
+{
+  "legalCharacterRegExp": "[a-z]|\\d",
+  "maxMoves": 5
+}
