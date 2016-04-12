@@ -1,0 +1,66 @@
+{
+  "name": "hangman",
+  "version": "0.1.0",
+  "description": "3dhubs technical challenge",
+  "main": "index.js",
+  "scripts": {
+    "dev": "webpack-dev-server --inline --hot --no-info",
+    "build": "cross-env NODE_ENV=production webpack --progress --hide-modules",
+    "lint": "eslint client server test",
+    "server": "node --harmony_destructuring server/index.js",
+    "test": "mocha --recursive test --harmony_destructuring --compiler js:babel-register"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@gitlab.com/AlexTes/hangman.git"
+  },
+  "keywords": [
+    "3dhubs",
+    "hangman"
+  ],
+  "author": "Alexander Tesfamichael <Alex.Tesfamichael@gmail.com>",
+  "private": true,
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.com/AlexTes/hangman/issues"
+  },
+  "homepage": "https://gitlab.com/AlexTes/hangman#README",
+  "devDependencies": {
+    "babel-core": "^6.1.21",
+    "babel-loader": "^6.1.0",
+    "babel-plugin-transform-runtime": "^6.1.18",
+    "babel-preset-es2015": "^6.1.18",
+    "babel-runtime": "^6.6.1",
+    "css-loader": "^0.23.1",
+    "eslint": "^2.7.0",
+    "eslint-config-airbnb": "^6.2.0",
+    "eslint-plugin-react": "^4.3.0",
+    "mocha": "^2.4.5",
+    "node-sass": "^3.4.2",
+    "sass-loader": "^3.2.0",
+    "should": "^8.3.0",
+    "vue-hot-reload-api": "^1.2.0",
+    "vue-html-loader": "^1.0.0",
+    "vue-loader": "^8.0.0",
+    "vue-style-loader": "^1.0.0",
+    "webpack": "^1.12.15",
+    "webpack-dev-server": "^1.14.1"
+  },
+  "dependencies": {
+    "babel-runtime": "^5.8.38",
+    "bluebird": "^3.3.4",
+    "debug": "^2.2.0",
+    "joi": "^8.0.5",
+    "lodash": "^4.10.0",
+    "material-design-lite": "^1.1.3",
+    "morgan": "^1.7.0",
+    "restify": "^4.0.4",
+    "sinon": "^1.17.3",
+    "superagent": "^1.8.3",
+    "supertest": "^1.2.0",
+    "vue": "^1.0.21",
+    "vue-mdl": "^0.7.3",
+    "vuestrap": "^1.0.2",
+    "vuestrap-base-components": "^0.8.6"
+  }
+}
