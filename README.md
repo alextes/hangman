@@ -8,8 +8,8 @@
 * a guess request should include a json body like:
 ```json
 {
-  "id": 123,
-  "character": "a"
+    "id": 123,
+    "character": "a"
 }
 ```
 * `npm run lint` to check for linting errors
