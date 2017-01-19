@@ -6,7 +6,7 @@
 * `GET /newGame` to start a game
 * `POST /makeGuess` to make a guess
 * a guess request should include a json body like:
-```
+```json
 {
   "id": 123,
   "character": "a"
