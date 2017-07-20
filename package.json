@@ -7,8 +7,8 @@
     "dev": "webpack-dev-server --inline --hot --no-info",
     "build": "NODE_ENV=production webpack --progress --hide-modules",
     "lint": "eslint client server test",
-    "server": "node --harmony_destructuring server/index.js",
-    "test": "mocha --recursive test --harmony_destructuring --compiler js:babel-register"
+    "server": "node server/index.js",
+    "test": "mocha --recursive test --compiler js:babel-register"
   },
   "repository": {
     "type": "git",
