@@ -24,14 +24,6 @@ server.use(restify.acceptParser(server.acceptable));
 // parse query strings
 server.use(restify.queryParser());
 
-// Don't serve publicly but make exceptions for index.html and our js bundle
-server.get(/\/index.html/, restify.serveStatic({
-  directory: path.join(__dirname, '../static'),
-}));
-server.get(/\/bundle.js/, restify.serveStatic({
-  directory: path.join(__dirname, '../static'),
-}));
-
 routes(server);
 
 if (!module.parent) {

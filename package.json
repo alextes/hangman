@@ -4,10 +4,8 @@
   "description": "3dhubs technical challenge",
   "main": "index.js",
   "scripts": {
-    "dev": "webpack-dev-server --inline --hot --no-info",
-    "build": "NODE_ENV=production webpack --progress --hide-modules",
-    "lint": "eslint client server test",
-    "server": "node server/index.js",
+    "lint": "eslint test",
+    "start": "node server/index.js",
     "test": "mocha --recursive test --compiler js:babel-register"
   },
   "repository": {

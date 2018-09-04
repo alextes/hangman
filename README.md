@@ -2,7 +2,7 @@
 3dhubs technical challenge
 
 ### use
-* `npm run server` to start the server. default address is `http://localhost:8888`
+* `npm run start` to start the server. default address is `http://localhost:8888`
 * `GET /newGame` to start a game
 * `POST /makeGuess` to make a guess
 * a guess request should include a json body like:
@@ -13,8 +13,6 @@
 }
 ```
 * `npm run lint` to check for linting errors
-* `npm run dev` to start the client dev server
-* `npm run build` to build
 
 ### requirements
 * chooses a random word out of 6 words: (3dhubs, marvin, print, filament, order, layer)
