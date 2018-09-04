@@ -1,8 +1,9 @@
 /* eslint-disable no-console */
+
 'use strict';
+
 const morgan = require('morgan');
 const debug = require('debug')('hangman:server');
-const path = require('path');
 const restify = require('restify');
 const routes = require('./routes');
 
@@ -20,9 +21,10 @@ const logger = morgan('dev', {
 server.use(logger);
 
 // reply 406 to requests we don't understand
-server.use(restify.acceptParser(server.acceptable));
+server.use(restify.plugins.acceptParser(server.acceptable));
+
 // parse query strings
-server.use(restify.queryParser());
+server.use(restify.plugins.queryParser());
 
 routes(server);
 

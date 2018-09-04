@@ -43,7 +43,7 @@
     "joi": "^13.6.0",
     "lodash": "^4.17.10",
     "morgan": "^1.9.0",
-    "restify": "^4.3.4",
+    "restify": "^7.2.1",
     "sinon": "^6.1.5",
     "superagent": "^3.8.3",
     "supertest": "^3.1.0"
