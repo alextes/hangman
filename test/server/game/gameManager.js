@@ -15,7 +15,7 @@ describe('GameManager', () => {
     });
     it('should return a an initial game state', () => {
       const initialGameState = gameManager.createGame(this.id);
-      initialGameState.should.have.keys(['movesLeft', 'secretWordLength']);
+      initialGameState.should.have.keys('movesLeft', 'secretWordLength');
     });
   });
 

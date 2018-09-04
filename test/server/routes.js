@@ -1,18 +1,19 @@
 'use strict';
-const gameManager = require('../../server/game/gameManager');
+
 const request = require('supertest');
 const should = require('should');
-const server = require('../../server/server');
 const sinon = require('sinon');
+const server = require('../../server/server');
+const gameManager = require('../../server/game/gameManager');
 const mockGameState = require('../mocks/gameState');
 
 describe('Routes', () => {
   describe('#newGame', () => {
-    it('should return 200 if starting was successful', done => {
+    it('should return 200 if starting was successful', (done) => {
       request(server)
         .get('/newGame')
         .expect(200, (err, res) => {
-          res.body.should.have.keys(Object.keys(mockGameState));
+          res.body.should.have.keys(...Object.keys(mockGameState));
           done(err);
         });
     });
@@ -39,7 +40,7 @@ describe('Routes', () => {
         });
     });
 
-    it('should respond 400 if the request is invalid', done => {
+    it('should respond 400 if the request is invalid', (done) => {
       const move = { character: null };
       request(server)
         .post('/makeGuess')
@@ -47,7 +48,7 @@ describe('Routes', () => {
         .expect(400, done);
     });
 
-    it('should respond 400 if the move was illegal', done => {
+    it('should respond 400 if the move was illegal', (done) => {
       const move = { character: '*' };
       request(server)
         .post('/makeGuess')
@@ -55,7 +56,7 @@ describe('Routes', () => {
         .expect(400, done);
     });
 
-    it('should respond 500 on an undefined error', done => {
+    it('should respond 500 on an undefined error', (done) => {
       sinon.stub(gameManager, 'evaluateMove').throws(new Error('forced error'));
       const move = { character: 'a', id: this.id };
       request(server)
